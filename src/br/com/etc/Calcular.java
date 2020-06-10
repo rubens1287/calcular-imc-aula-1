@@ -25,8 +25,13 @@ public class Calcular {
         if (resultado < 20){
             return "Você está magro demais, pode comer até umas horas" ;
         }else  if(resultado >= 20 && resultado <= 24){
-            return "Você está normal , pode comer moderadamente" ;
-
+            return "Você está normal, pode comer moderadamente" ;
+        }else  if(resultado >= 25 && resultado <= 29){
+            return "Você está acima do peso!" ;
+        }else  if(resultado >= 30 && resultado <= 34){
+            return "Você está obeso!" ;
+        }else  if(resultado > 34){
+            return "Você está muito obeso!" ;
         }
 
         return null;
