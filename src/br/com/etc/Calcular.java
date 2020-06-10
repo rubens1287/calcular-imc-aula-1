@@ -18,9 +18,18 @@ public class Calcular {
         System.out.println("Resultado: " + calcularIMC(peso, altura));
     }
 
-    public static double calcularIMC(double peso, double altura) {
+    public static String calcularIMC(double peso, double altura) {
 
-        return peso / Math.pow(altura, 2);
+        double resultado = (int) (peso / Math.pow(altura, 2));
+
+        if (resultado < 20){
+            return "Você está magro demais, pode comer até umas horas" ;
+        }else  if(resultado >= 20 && resultado <= 24){
+            return "Você está normal , pode comer moderadamente" ;
+
+        }
+
+        return null;
 
     }
 }
